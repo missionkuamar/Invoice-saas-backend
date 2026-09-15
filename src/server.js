@@ -147,12 +147,12 @@ app.get('/api/health', (req, res) => {
 // });
 
 // Serve static files from the 'client/dist' folder
-app.use(express.static(path.join(__dirname, 'client', 'dist')));
+// app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
-// Catch-all route to serve index.html for frontend React app (This should be last)
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-});
+// // Catch-all route to serve index.html for frontend React app (This should be last)
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+// });
 
 const PORT = process.env.PORT || 5000;
 
